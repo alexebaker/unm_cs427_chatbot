@@ -1,4 +1,4 @@
-# UNM CS 427 chatBot
+# UNM CS 427 ChatBot
 
 Chatbot for CS 427
 
@@ -13,7 +13,6 @@ The next part of the assignment is to turn your design into a chatbot. You shoul
     c. Stochasticity -- this randomly changes the response that is returned with some probability.
 
 The development can be language independent, but it must run on our CS department systems or must be installed at a romote site
-
 that the TA/Instructor can interact with your program.
 
 You must turn in the following items (1-3 in .zip file email to TA/instructor as a team and 4 upload to Learn, individually):
@@ -24,7 +23,7 @@ You must turn in the following items (1-3 in .zip file email to TA/instructor as
 
         * Instructions on how to run (execute) your program on the CS department systems
 
-        _or_
+        or
 
         * Instructions how to connect to your remote site to execute your program
 
@@ -32,3 +31,7 @@ You must turn in the following items (1-3 in .zip file email to TA/instructor as
 
     4. Upload to learn a text file explaining the breakdown of the work done by the team.
 
+## Authors
+
+    * [David Sledge](sledged@gmail.com)
+    * [Alex Baker] (alexebaker@unm.edu)
