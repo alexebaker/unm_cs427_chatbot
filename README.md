@@ -33,5 +33,5 @@ You must turn in the following items (1-3 in .zip file email to TA/instructor as
 
 ## Authors
 
-    * [David Sledge](sledged@gmail.com "email")
-    * [Alex Baker] (alexebaker@unm.edu "email")
+    * [David Sledge]<sledged@gmail.com>
+    * [Alex Baker] <alexebaker@unm.edu>
