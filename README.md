@@ -2,15 +2,42 @@
 
 Chatbot for CS 427
 
+## Usage
+
+1. Install pre-requisets
+
+```bash
+sudo apt-get install python-pip
+pip install virtualenv
+```
+
+2. Setup the virtual environment.
+
+```bash
+./init-venv.sh
+```
+
+3. Activate the virtual env in your current shell
+
+```bash
+source .venv/bin/activate
+```
+
+4. run sickbot.py
+
+```bash
+python sickbot.py
+```
+
 ## Description
 
 The next part of the assignment is to turn your design into a chatbot. You should use three primary matching tools:
 
-a. Direct matching -- these are exact phrase matching and having a canned response returned.
+* Direct matching -- these are exact phrase matching and having a canned response returned.
 
-b. Partial matching -- these look for key phrases and return a response that is related to the input phrase.
+* Partial matching -- these look for key phrases and return a response that is related to the input phrase.
 
-c. Stochasticity -- this randomly changes the response that is returned with some probability.
+* Stochasticity -- this randomly changes the response that is returned with some probability.
 
 The development can be language independent, but it must run on our CS department systems or must be installed at a romote site
 that the TA/Instructor can interact with your program.
@@ -29,7 +56,7 @@ You must turn in the following items (1-3 in .zip file email to TA/instructor as
 
 3. A text file named Output.txt showing you testing your program.
 
-8. Upload to learn a text file explaining the breakdown of the work done by the team.
+4. Upload to learn a text file explaining the breakdown of the work done by the team.
 
 ## Authors
 
