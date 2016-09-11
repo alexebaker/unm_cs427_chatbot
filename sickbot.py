@@ -8,10 +8,11 @@ def main():
 
     while True:
         question = cli.read_question()
-        if question.lower() in config.exit_flags:
-            break
-        answer = knowledge_base.get_answer(question)
-        cli.write_answer(answer)
+        if knowledge_base.is_command(question):
+            knowledge_base.execute_command(question)
+        else:
+            answer = knowledge_base.get_answer(question)
+            cli.write_answer(answer)
     return
 
 
