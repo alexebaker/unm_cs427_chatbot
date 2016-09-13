@@ -43,14 +43,15 @@ def get_answer(question):
     :rtype: string
     :returns: An answer to the given question
     """
-    transcript.append(question)
     answer = ""
+    question = question.lower()
     if question in transcript:
         answer = random.choice(config.repeated_question)
     elif question in config.knowledge_base:
-        answer = random.choice(config.knowledge_base)
-    else:
-        answer = random.choice(config.unknown_question)
+        answer = random.choice(config.knowledge_base[question])
+    #else:
+    #    answer = random.choice(config.unknown_question)
+    transcript.append(question)
     transcript.append(answer)
     return answer
 

@@ -29,32 +29,34 @@ knowledge_base = {
     "": ["Have you ever known someone that was terminally ill?",
          "I'm in pain.",
          "I'm dying."],
-    "Good Morning": ["Not so much, but I hope you're having one."],
-    "Good Afternoon": ["Not so much, but I hope you're having one."],
-    "Good Evening": ["Not so much, but I hope you're having one."],
-    "Good Day": ["Not so much, but I hope you're having one."],
-    "Hello": ["Hello", "Hi", "Howdy"],
-    "Hi": ["Hello", "Hi", "Howdy"],
-    "Howdy": ["Hello", "Hi", "Howdy"],
-    "What's your name?": ["SickBot"],
-    "How are you?": ["I'm in a little pain, but could be worse"],
-    "How are you today?": ["I'm in a little pain, but could be worse"],
-    "Why are you in pain?": ["I have stomach cancer."],
-    "What's wrong?": ["I have stomach cancer. It's terminal."],
-    "Is something wrong?": ["I have stomach cancer. It's terminal."],
-    "What hurts?": ["My stomach.", "Everything."],
-    "What are your symtoms?":
+    "good gorning": ["Not so much, but I hope you're having one."],
+    "good afternoon": ["Not so much, but I hope you're having one."],
+    "good gvening": ["Not so much, but I hope you're having one."],
+    "good day": ["Not so much, but I hope you're having one."],
+    "hello": ["Hello", "Hi", "Howdy"],
+    "hi": ["Hello", "Hi", "Howdy"],
+    "howdy": ["Hello", "Hi", "Howdy"],
+    "what's your name?": ["SickBot"],
+    "how are you?": ["I'm in a little pain, but could be worse"],
+    "how are you today?": ["I'm in a little pain, but could be worse"],
+    "why are you in pain?": ["I have stomach cancer."],
+    "what's wrong?": ["I have stomach cancer. It's terminal."],
+    "is something wrong?": ["I have stomach cancer. It's terminal."],
+    "what hurts?": ["My stomach.", "Everything."],
+    "what are your symtoms?":
         ["I have intense abdominal pain and blood in my vomit."],
-    "What do you do for fun?": ["Suffer in pain."],
+    "what do you do for fun?": ["Suffer in pain."],
+    "i'm sorry": ["Thank You."],
+    "that sucks": ["Yeah, it does."],
 }
 
 repeated_question = [
-    "Stop wasting my time if I'm dying!",
-    "I've already answered that, \
-    do I need to spend my little time left repeating myself!",
+    "stop wasting my time if I'm dying!",
+    "i've already answered that, "
+    "do I need to spend my little time left repeating myself!",
 ]
 
 unknown_question = [
-    "I'm in too much pain to answer that.",
-    "I cna't even think about that right now."
+    "i'm in too much pain to answer that.",
+    "i can't even think about that right now."
 ]
