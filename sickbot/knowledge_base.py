@@ -49,11 +49,43 @@ def get_answer(question):
         answer = random.choice(config.repeated_question)
     elif question in config.knowledge_base:
         answer = random.choice(config.knowledge_base[question])
-    #else:
-    #    answer = random.choice(config.unknown_question)
+    elif is_pattern(question):
+        answer = pattern_answer(question)
+    else:
+        answer = random.choice(config.unknown_question)
     transcript.append(question)
     transcript.append(answer)
     return answer
+
+
+def is_pattern(question):
+    """Checks to see if there is a pattern matching the question.
+
+    :type question: string
+    :param question: Question to check for a matching pattern
+
+    :rtype: bool
+    :returns: True if the question matches a pattern, False otherwise
+    """
+    for regex, _ in config.pattern_base.iteritems():
+        if regex.match(question):
+            return True
+    return False
+
+
+def pattern_answer(question):
+    """Get the answer to the pattern the question matches.
+
+    :type question: string
+    :param question: Question to check for a matching pattern
+
+    :rtype: string
+    :returns: Answer to the question
+    """
+    for regex, answer in config.pattern_base.iteritems():
+        if regex.match(question):
+            return answer
+    return ""
 
 
 def save_transcript():

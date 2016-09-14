@@ -1,3 +1,5 @@
+import re
+
 welcome_msg = """
   ______   __            __        _______               __
  /      \ /  |          /  |      /       \             /  |
@@ -48,6 +50,10 @@ knowledge_base = {
     "what do you do for fun?": ["Suffer in pain."],
     "i'm sorry": ["Thank You."],
     "that sucks": ["Yeah, it does."],
+}
+
+pattern_base = {
+    re.compile(".*name\??$"): "SickBot",
 }
 
 repeated_question = [
