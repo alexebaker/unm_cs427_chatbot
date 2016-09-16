@@ -1,5 +1,5 @@
 from config import prompt
-
+from sickbot import knowledge_base
 
 def read_question():
     """Reads input from the command line.
@@ -20,4 +20,5 @@ def write_answer(answer):
     :param answer: String to write to the command line.
     """
     print prompt + answer
+    knowledge_base.transcript.append(answer)
     return

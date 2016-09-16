@@ -53,8 +53,6 @@ def get_answer(question):
         answer = pattern_answer(question)
     else:
         answer = random.choice(config.unknown_question)
-    transcript.append(question)
-    transcript.append(answer)
     return answer
 
 
