@@ -21,7 +21,7 @@ def write_answer(answer):
     :type answer: string
     :param answer: String to write to the command line.
     """
-    time.sleep(len(answer)/10)
+    time.sleep(len(answer)/10 + 1)
     print bot_prompt + answer
     knowledge_base.transcript.append(answer)
     return
