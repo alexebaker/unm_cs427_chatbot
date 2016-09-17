@@ -22,10 +22,6 @@ class ListenThread (threading.Thread):
                 knowledge_base.execute_command(question)
             else:
                 self.questionQueue.append(question)
-#                answer = knowledge_base.get_answer(question)
-#                knowledge_base.transcript.append(question)
-#                cli.write_answer(answer)
-#                self.resetImpatience()
     def resetImpatience(self):
         self.lastResponseTime = time.time()
         self.impatienceLevel = 0
@@ -74,8 +70,6 @@ class Main:
                 return
             if timeDiff / 10 > listenThread.impatienceLevel + 1:
                 impatientResponses[listenThread.impatienceLevel](cli.write_answer)
-                sys.stdout.write(config.user_prompt)
-                sys.stdout.flush()
                 listenThread.impatienceLevel += 1
             time.sleep(1)
         return
