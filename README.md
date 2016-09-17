@@ -4,30 +4,22 @@ Chatbot for CS 427
 
 ## Usage
 
-1. Install pre-requisets
-
-   ```bash
-   sudo apt-get install python-pip
-   pip install virtualenv
-   ```
-
-2. Setup the virtual environment.
-
-   ```bash
-   ./init-venv.sh
-   ```
-
-3. Activate the virtual env in your current shell
-
-   ```bash
-   source .venv/bin/activate
-   ```
-
-4. run sickbot.py
+1. run sickbot.py
 
    ```bash
    python sickbot.py
    ```
+
+2. commands can be found with the "!help" command
+
+    ```bash
+    sickbot~>> !help
+
+    Commands:
+        !quit, !exit    - Exit SickBot
+        !save           - Save the current transcript to a file
+        !help           - Show this help message
+    ```
 
 ## Description
 
