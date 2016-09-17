@@ -74,6 +74,8 @@ class Main:
                 return
             if timeDiff / 10 > listenThread.impatienceLevel + 1:
                 impatientResponses[listenThread.impatienceLevel](cli.write_answer)
+                sys.stdout.write(config.user_prompt)
+                sys.stdout.flush()
                 listenThread.impatienceLevel += 1
             time.sleep(1)
         return

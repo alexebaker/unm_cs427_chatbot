@@ -21,9 +21,10 @@ Commands:
     !help           - Show this help message
 """
 
-commands = ['!quit', '!exit', '!help', '!save']
+commands = ['!quit', '!exit', '!help', '!save', 'bye', 'goodbye']
 
-prompt = "sickbot~>> "
+bot_prompt = "\rsickbot~>> "
+user_prompt = "user~>> "
 
 transcript_filename = "sickbot_transcript.txt"
 
