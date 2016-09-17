@@ -19,8 +19,8 @@ class ListenThread (threading.Thread):
             if knowledge_base.is_command(question):
                 knowledge_base.execute_command(question)
             else:
-                knowledge_base.transcript.append(question)
                 answer = knowledge_base.get_answer(question)
+                knowledge_base.transcript.append(question)
                 cli.write_answer(answer)
                 self.lastResponseTime = time.time()
 
