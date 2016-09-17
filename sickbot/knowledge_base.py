@@ -2,6 +2,7 @@ import sys
 import random
 
 import config
+import cli
 
 
 transcript = []
@@ -26,6 +27,9 @@ def execute_command(cmd):
     :param cmd: command to execute
     """
     if cmd in ['!quit', '!exit']:
+        sys.exit(0)
+    elif cmd in ['bye', 'goodbye']:
+        cli.write_answer('Goodbye!')
         sys.exit(0)
     elif cmd in ['!help']:
         print config.help_msg

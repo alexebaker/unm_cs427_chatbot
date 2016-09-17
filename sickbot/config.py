@@ -21,7 +21,7 @@ Commands:
     !help           - Show this help message
 """
 
-commands = ['!quit', '!exit', '!help', '!save']
+commands = ['!quit', '!exit', '!help', '!save', 'bye', 'goodbye']
 
 bot_prompt = "\rsickbot~>> "
 user_prompt = "user~>> "

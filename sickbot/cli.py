@@ -1,3 +1,5 @@
+import time
+
 from config import bot_prompt, user_prompt
 from sickbot import knowledge_base
 
@@ -19,6 +21,7 @@ def write_answer(answer):
     :type answer: string
     :param answer: String to write to the command line.
     """
+    time.sleep(len(answer)/10)
     print bot_prompt + answer
     knowledge_base.transcript.append(answer)
     return
