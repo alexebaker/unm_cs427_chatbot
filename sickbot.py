@@ -72,7 +72,10 @@ def main():
         else:
             time.sleep(15 - timeDiff)
             continue
-        cli.write_answer(answer)
+        #cli.write_answer(answer)
+        print answer
+        sys.stdout.write(config.prompt)
+        sys.stdout.flush()
         time.sleep(nextResponseIn - timeDiff)
     return
 
