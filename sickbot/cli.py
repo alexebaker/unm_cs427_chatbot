@@ -1,7 +1,9 @@
 import time
+import sys
 
-from config import bot_prompt, user_prompt
-from sickbot import knowledge_base
+import config
+import knowledge_base
+
 
 def read_question():
     """Reads input from the command line.
@@ -11,7 +13,7 @@ def read_question():
     :rtype: string
     :returns: Question read from the command line.
     """
-    question = raw_input(user_prompt)
+    question = raw_input()
     return question
 
 
@@ -22,6 +24,8 @@ def write_answer(answer):
     :param answer: String to write to the command line.
     """
     time.sleep(len(answer)/10 + 1)
-    print bot_prompt + answer
+    print config.bot_prompt + answer
+    sys.stdout.write(config.user_prompt)
+    sys.stdout.flush()
     knowledge_base.transcript.append(answer)
     return

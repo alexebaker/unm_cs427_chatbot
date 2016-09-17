@@ -38,6 +38,8 @@ class Main:
 
     def main(self):
         print config.welcome_msg
+        sys.stdout.write(config.user_prompt)
+        sys.stdout.flush()
         listenThread = ListenThread(1, "Thread-1", 1)
         listenThread.start()
         impatientResponses = [
