@@ -18,7 +18,7 @@ help_msg = """
 Commands:
     !quit, !exit    - Exit SickBot
     !save           - Save the current transcript to a file
-    !help           - How this help message
+    !help           - Show this help message
 """
 
 commands = ['!quit', '!exit', '!help', '!save']
