@@ -1,6 +1,7 @@
 from sickbot import config
 from sickbot import cli
 from sickbot import knowledge_base
+from collections import deque
 import thread
 import threading
 import time
@@ -12,19 +13,18 @@ class ListenThread (threading.Thread):
         self.threadID = threadID
         self.name = name
         self.daemon = True
-        self.lastResponseTime = time.time()
-        self.impatienceLevel = 0
+        self.resetImpatience()
+        self.questionQueue = deque()
     def run(self):
         while True:
             question = cli.read_question()
             if knowledge_base.is_command(question):
                 knowledge_base.execute_command(question)
             else:
-                answer = knowledge_base.get_answer(question)
-                knowledge_base.transcript.append(question)
-                cli.write_answer(answer)
-                self.lastResponseTime = time.time()
-                self.impatienceLevel = 0
+                self.questionQueue.append(question)
+    def resetImpatience(self):
+        self.lastResponseTime = time.time()
+        self.impatienceLevel = 0
 
 class Main:
     def __init__(self):
@@ -61,6 +61,12 @@ class Main:
         while True:
             if not listenThread.isAlive():
                 return
+            if listenThread.questionQueue:
+                question = listenThread.questionQueue.popleft()
+                answer = knowledge_base.get_answer(question)
+                cli.write_answer(answer)
+                listenThread.resetImpatience()
+                continue
             timeDiff = time.time() - listenThread.lastResponseTime
             if timeDiff / 10 > len(impatientResponses) + 1:
                 return
