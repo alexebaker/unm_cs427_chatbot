@@ -23,7 +23,8 @@ Commands:
 
 commands = ['!quit', '!exit', '!help', '!save']
 
-prompt = "sickbot~>> "
+bot_prompt = "\rsickbot~>> "
+user_prompt = "user~>> "
 
 transcript_filename = "sickbot_transcript.txt"
 
