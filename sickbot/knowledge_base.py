@@ -80,9 +80,9 @@ def pattern_answer(question):
     :rtype: string
     :returns: Answer to the question
     """
-    for regex, answer in config.pattern_base.iteritems():
+    for regex, answers in config.pattern_base.iteritems():
         if regex.match(question):
-            return answer
+            return random.choice(answers)
     return ""
 
 
