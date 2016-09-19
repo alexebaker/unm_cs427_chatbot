@@ -18,6 +18,8 @@ class ListenThread (threading.Thread):
     def run(self):
         while True:
             question = cli.read_question()
+            sys.stdout.write(config.user_prompt)
+            sys.stdout.flush()
             if knowledge_base.is_command(question):
                 knowledge_base.execute_command(question)
             else:
@@ -34,7 +36,7 @@ class Main:
         rspHandler(config.knowledge_base[""][self.kbResponse])
         self.kbResponse += 1
         if self.kbResponse >= len(config.knowledge_base[""]):
-            self.kbResponse = 0
+            self.kbResponse = 1
 
     def main(self):
         print config.welcome_msg
