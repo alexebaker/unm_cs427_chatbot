@@ -1,0 +1,15 @@
+Alex:
+* Initial coding for the bot including:
+  * knowledge base and
+  * responses (random and pattern matching)
+    * Stochastic
+    * canned and
+    * pattern matching
+* Test cases and transcriptions
+
+David:
+* Multithreading for responding to idleness from the user
+* provided timing between idle and user-solicited responses
+* Additions to knowledge base and responses
+* Update Test cases and transcriptions
+
