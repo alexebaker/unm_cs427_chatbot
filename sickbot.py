@@ -79,6 +79,9 @@ class Main(object):
             if timeDiff / 10 > listenThread.impatienceLevel + 1:
                 impatientResponses[listenThread.impatienceLevel](cli.write_answer)
                 listenThread.impatienceLevel += 1
+                if len(impatientResponses) <= listenThread.impatienceLevel:
+                    time.sleep(1)
+                    return
             time.sleep(1)
         return
 

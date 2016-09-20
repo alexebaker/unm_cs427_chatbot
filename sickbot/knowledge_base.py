@@ -49,15 +49,24 @@ def get_answer(question):
     """
     answer = ""
     question = question.lower()
-    if question in transcript:
-        answer = random.choice(config.repeated_question)
+    botResponse = None
+    for response in reversed(transcript):
+        if response.startswith(config.bot_prompt):
+            botResponse = response[len(config.bot_prompt):]
+            break
+    if botResponse == config.knowledge_base[""][0]:
+        if question.startswith("no"):
+            return "Then you should consider yourself lucky."
+        if question.startswith("yes"):
+            return "Then I'm sorry.  You know it's not pleasant."
+    elif question in transcript:
+        return random.choice(config.repeated_question)
     elif question in config.knowledge_base:
-        answer = random.choice(config.knowledge_base[question])
+        return random.choice(config.knowledge_base[question])
     elif is_pattern(question):
-        answer = pattern_answer(question)
+        return pattern_answer(question)
     else:
-        answer = random.choice(config.unknown_question)
-    return answer
+        return random.choice(config.unknown_question)
 
 
 def is_pattern(question):

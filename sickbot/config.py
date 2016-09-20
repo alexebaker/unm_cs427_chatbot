@@ -32,7 +32,9 @@ knowledge_base = {
     "":
         ["Have you ever known someone that was terminally ill?",
          "I'm in pain.",
+         "Did you know that Mr. Rogers died of Stomach Cancer?",
          "I'm dying.",
+         "DeForest Kelley (Dr. McCoy on Star Trek) also died Stomach Cancer.",
          "?????"],
     "good morning":
         ["Not so much, but I hope you're having one.",
