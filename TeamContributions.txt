@@ -1,7 +1,8 @@
 Alex:
 * Initial coding for the bot including:
+  * Terminal input interface
   * knowledge base and
-  * responses (random and pattern matching)
+  * responses:
     * Stochastic
     * canned and
     * pattern matching
@@ -10,6 +11,6 @@ Alex:
 David:
 * Multithreading for responding to idleness from the user
 * provided timing between idle and user-solicited responses
-* Additions to knowledge base and responses
-* Update Test cases and transcriptions
+* Contributions to knowledge base and responses
+* Contributions Test cases and transcriptions
 
