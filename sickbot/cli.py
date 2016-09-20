@@ -14,6 +14,7 @@ def read_question():
     :returns: Question read from the command line.
     """
     question = raw_input()
+    knowledge_base.transcript.append(config.user_prompt + question)
     return question
 
 
@@ -27,5 +28,5 @@ def write_answer(answer):
     print config.bot_prompt + answer
     sys.stdout.write(config.user_prompt)
     sys.stdout.flush()
-    knowledge_base.transcript.append(answer)
+    knowledge_base.transcript.append(config.bot_prompt + answer)
     return

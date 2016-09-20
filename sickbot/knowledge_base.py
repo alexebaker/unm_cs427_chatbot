@@ -94,5 +94,5 @@ def save_transcript():
     """Saves the current transcript to a file."""
     with open(config.transcript_filename, 'w') as f:
         for line in transcript:
-            f.write("%s%s\n" % (config.prompt, line))
+            f.write("%s\n" % (line))
     return

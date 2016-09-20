@@ -1,18 +1,53 @@
-sickbot~>> hi
+Basic Chat:
+
+user~>> hi
 sickbot~>> Hi!
-sickbot~>> how are you today
+user~>> how are you today
 sickbot~>> I'm not feeling well.
-sickbot~>> why is that?
+user~>> why is that?
 sickbot~>> i can't even think about that right now.
-sickbot~>> I'm sorry
+user~>> I'm sorry
 sickbot~>> Thank You.
-sickbot~>> what do you do for fun?
+user~>> what do you do for fun?
 sickbot~>> Suffer in pain.
-sickbot~>> why are you in pain?
+user~>> why are you in pain?
 sickbot~>> I'm sick and it hurts!
-sickbot~>> what sickness do you have
+user~>> what sickness do you have
 sickbot~>> i'm in too much pain to answer that.
-sickbot~>> what hurts
+user~>> what hurts
 sickbot~>> Everything.
+
+user~>> hi
+sickbot~>> Hello!
+user~>> What's your name?
+sickbot~>> SickBot
+user~>> nice to meet you
+sickbot~>> Nice to meet you too.
+user~>> how are you today?
+sickbot~>> Not good, I feel horrible!
+user~>> why do you feel bad?
+sickbot~>> I have stomach cancer. It's terminal :(
+user~>> I'm sorry
+sickbot~>> Thank You.
+
+No user input:
+
+sickbot~>> Have you ever known someone that was terminally ill?
+sickbot~>> I'm in pain.
+sickbot~>> I'm dying.
+sickbot~>> Are you still there?
+sickbot~>> Hello?
+sickbot~>> Sigh...
+sickbot~>> I'm going to leave
+sickbot~>> Bye
+
+Commands:
+
+user~>> !help
+user~>>
+Commands:
+    !quit, !exit    - Exit SickBot
+    !save           - Save the current transcript to a file
+    !help           - Show this help message
 
 

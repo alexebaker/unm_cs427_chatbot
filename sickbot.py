@@ -1,11 +1,13 @@
-from sickbot import config
-from sickbot import cli
-from sickbot import knowledge_base
-from collections import deque
-import thread
 import threading
 import time
 import sys
+
+from collections import deque
+
+from sickbot import config
+from sickbot import cli
+from sickbot import knowledge_base
+
 
 class ListenThread (threading.Thread):
     def __init__(self, threadID, name, counter):
@@ -15,6 +17,7 @@ class ListenThread (threading.Thread):
         self.daemon = True
         self.resetImpatience()
         self.questionQueue = deque()
+
     def run(self):
         while True:
             question = cli.read_question()
@@ -28,7 +31,8 @@ class ListenThread (threading.Thread):
         self.lastResponseTime = time.time()
         self.impatienceLevel = 0
 
-class Main:
+
+class Main(object):
     def __init__(self):
         self.kbResponse = 0
 
