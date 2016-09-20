@@ -1,16 +1,16 @@
-Alex:
-* Initial coding for the bot including:
-  * Terminal input interface
-  * knowledge base and
-  * responses:
-    * Stochastic
-    * canned and
-    * pattern matching
-* Test cases and transcriptions
+Alex Baker:
+    * Initial coding for the bot including:
+    * Terminal input interface
+    * knowledge base and
+    * responses:
+        * Stochastic
+        * canned and
+        * pattern matching
+    * Test cases and transcriptions
 
-David:
-* Multithreading for responding to idleness from the user
-* provided timing between idle and user-solicited responses
-* Contributions to knowledge base and responses
-* Contributions Test cases and transcriptions
+David Sledge:
+    * Multithreading for responding to idleness from the user
+    * provided timing between idle and user-solicited responses
+    * Contributions to knowledge base and responses
+    * Contributions Test cases and transcriptions
 
