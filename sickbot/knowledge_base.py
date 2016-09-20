@@ -59,7 +59,7 @@ def get_answer(question):
             return "Then you should consider yourself lucky."
         if question.startswith("yes"):
             return "Then I'm sorry.  You know it's not pleasant."
-    elif question in transcript:
+    if question in transcript:
         return random.choice(config.repeated_question)
     elif question in config.knowledge_base:
         return random.choice(config.knowledge_base[question])

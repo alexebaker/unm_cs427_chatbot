@@ -34,7 +34,7 @@ No user input:
 
 sickbot~>> Have you ever known someone that was terminally ill?
 sickbot~>> I'm in pain.
-sickbot~>> I'm dying.
+sickbot~>> Did you know that Mr. Rogers died of Stomach Cancer?
 sickbot~>> Are you still there?
 sickbot~>> Hello?
 sickbot~>> Sigh...

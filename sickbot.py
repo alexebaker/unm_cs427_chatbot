@@ -15,7 +15,6 @@ class ListenThread (threading.Thread):
         self.threadID = threadID
         self.name = name
         self.daemon = True
-        self.resetImpatience()
         self.questionQueue = deque()
 
     def run(self):
@@ -27,9 +26,6 @@ class ListenThread (threading.Thread):
                 knowledge_base.execute_command(question)
             else:
                 self.questionQueue.append(question)
-    def resetImpatience(self):
-        self.lastResponseTime = time.time()
-        self.impatienceLevel = 0
 
 
 class Main(object):
@@ -63,6 +59,8 @@ class Main(object):
           , lambda rspHandler:
                 rspHandler("Bye")
         ]
+        lastResponseTime = time.time()
+        impatienceLevel = 0
 
         while True:
             if not listenThread.isAlive():
@@ -71,17 +69,20 @@ class Main(object):
                 question = listenThread.questionQueue.popleft()
                 answer = knowledge_base.get_answer(question)
                 cli.write_answer(answer)
-                listenThread.resetImpatience()
+                lastResponseTime = time.time()
+                impatienceLevel = 0
                 continue
-            timeDiff = time.time() - listenThread.lastResponseTime
-            if timeDiff / 10 > len(impatientResponses) + 1:
-                return
-            if timeDiff / 10 > listenThread.impatienceLevel + 1:
-                impatientResponses[listenThread.impatienceLevel](cli.write_answer)
-                listenThread.impatienceLevel += 1
-                if len(impatientResponses) <= listenThread.impatienceLevel:
+            timeDiff = time.time() - lastResponseTime
+            if timeDiff >= 10:
+                impatientResponses[impatienceLevel](cli.write_answer)
+                impatienceLevel += 1
+                if len(impatientResponses) <= impatienceLevel:
                     time.sleep(1)
+                    # exit with a somewhat cleaner CLI prompt
+                    sys.stdout.write("\n")
+                    sys.stdout.flush()
                     return
+                lastResponseTime = time.time()
             time.sleep(1)
         return
 
